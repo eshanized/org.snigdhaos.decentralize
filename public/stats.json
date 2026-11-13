@@ -1,0 +1,22 @@
+{
+  "repository": "eshanized/org.snigdhaos.decentralize",
+  "generated_at": "2026-11-13T21:34:42Z",
+  "totals": {
+    "iso_downloads": 0,
+    "asset_downloads": 0,
+    "releases": 0,
+    "stable_releases": 0,
+    "prereleases": 0,
+    "stable_iso_downloads": 0,
+    "prerelease_iso_downloads": 0,
+    "stable_asset_downloads": 0,
+    "prerelease_asset_downloads": 0
+  },
+  "latest": {
+    "tag": "",
+    "version": "",
+    "iso_downloads": 0
+  },
+  "releases": [],
+  "disclaimer": "Metrics represent native GitHub-reported asset download counts via GitHub Releases REST API and do not imply unique visitors or verified successful system installations."
+}

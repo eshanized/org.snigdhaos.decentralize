@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snigdha OS Decentralized — Official Release Downloads & Analytics</title>
+  <meta name="description" content="Public download metrics, binary mirror, and cryptographic integrity verification for Snigdha OS Decentralized.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-bright: #f0f6fc;
+      --accent: #58a6ff;
+      --green: #238636;
+      --purple: #8957e5;
+      --orange: #d29922;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    h1 {
+      color: var(--text-bright);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .subtitle {
+      color: #8b949e;
+      font-size: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .card:hover {
+      border-color: #58a6ff;
+    }
+    .card-label {
+      color: #8b949e;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .card-value {
+      color: var(--text-bright);
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+    .card-subtext {
+      color: #8b949e;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: var(--text-bright);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .badges-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      align-items: center;
+    }
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .badge-item img {
+      height: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #1f242c;
+      color: var(--text-bright);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .tag-pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #21262d;
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+    .tag-pill.candidate {
+      color: var(--orange);
+      border-color: rgba(210, 153, 34, 0.4);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .disclaimer {
+      margin-top: 3rem;
+      padding: 1rem;
+      border-radius: 6px;
+      background: rgba(110, 118, 129, 0.1);
+      border-left: 4px solid #8b949e;
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+    .links-bar {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        <span>🌐</span> Snigdha OS Decentralized Mirror Analytics
+      </h1>
+      <p class="subtitle">
+        Authoritative download metrics derived directly from GitHub Release Asset analytics.
+      </p>
+      <div class="links-bar">
+        <a href="https://github.com/eshanized/org.snigdhaos.decentralize" target="_blank" rel="noopener">GitHub Mirror Repository</a>
+        <a href="https://gitlab.com/SnigdhaOS/decentralize/iso" target="_blank" rel="noopener">GitLab Canonical Source</a>
+        <a href="stats.json" target="_blank">Raw Stats JSON Endpoint</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-label">Total ISO Downloads</div>
+        <div class="card-value" id="val-iso-downloads">0</div>
+        <div class="card-subtext">Operating system installation images</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Total Asset Downloads</div>
+        <div class="card-value" id="val-asset-downloads">0</div>
+        <div class="card-subtext">ISOs, checksums, SBOMs & signatures</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Total Mirrored Releases</div>
+        <div class="card-value" id="val-releases">0</div>
+        <div class="card-subtext" id="val-releases-breakdown">0 stable / 0 candidate</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Latest Version</div>
+        <div class="card-value" id="val-latest-version" style="font-size: 1.6rem; padding-top: 0.5rem;">—</div>
+        <div class="card-subtext" id="val-latest-downloads">0 downloads</div>
+      </div>
+    </div>
+
+    <section>
+      <h2>Official Embeddable Badges</h2>
+      <div class="badges-flex">
+        <div class="badge-item">
+          <img src="badges/total-iso-downloads.svg" alt="Total ISO Downloads">
+        </div>
+        <div class="badge-item">
+          <img src="badges/latest-release-downloads.svg" alt="Latest Release Downloads">
+        </div>
+        <div class="badge-item">
+          <img src="badges/total-downloads.svg" alt="Total Asset Downloads">
+        </div>
+        <div class="badge-item">
+          <img src="badges/latest-version.svg" alt="Latest Version">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Releases Breakdown</h2>
+      <table id="releases-table">
+        <thead>
+          <tr>
+            <th>Release Tag</th>
+            <th>Type</th>
+            <th>Published Date</th>
+            <th>ISO Downloads</th>
+            <th>Total Asset Downloads</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="releases-body">
+          <tr>
+            <td colspan="6" style="text-align: center; color: #8b949e;">Loading live release telemetry...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="disclaimer">
+      <strong>Public Metrics Notice:</strong> Download counts are reported directly via the native GitHub REST API (<code>download_count</code>). Metrics represent binary asset retrieval transactions and do not imply unique human users or verified installation outcomes.
+    </div>
+  </div>
+
+  <script>
+    async function loadStats() {
+      try {
+        let data;
+        try {
+          const resp = await fetch('stats.json?t=' + Date.now());
+          if (resp.ok) {
+            data = await resp.json();
+          }
+        } catch (e) {
+          console.warn('Local stats.json fetch failed, falling back to GitHub API', e);
+        }
+
+        if (!data) {
+          const ghResp = await fetch('https://api.github.com/repos/eshanized/org.snigdhaos.decentralize/releases');
+          if (ghResp.ok) {
+            const raw = await ghResp.json();
+            data = {
+              totals: {
+                iso_downloads: raw.reduce((acc, r) => acc + r.assets.filter(a => a.name.endsWith('.iso')).reduce((s, a) => s + a.download_count, 0), 0),
+                asset_downloads: raw.reduce((acc, r) => acc + r.assets.reduce((s, a) => s + a.download_count, 0), 0),
+                releases: raw.length,
+                stable_releases: raw.filter(r => !r.prerelease).length,
+                prereleases: raw.filter(r => r.prerelease).length
+              },
+              latest: raw.length > 0 ? {
+                version: raw[0].tag_name.replace(/^v/, ''),
+                iso_downloads: raw[0].assets.filter(a => a.name.endsWith('.iso')).reduce((s, a) => s + a.download_count, 0)
+              } : { version: 'None', iso_downloads: 0 },
+              releases: raw.map(r => ({
+                tag: r.tag_name,
+                name: r.name,
+                prerelease: r.prerelease,
+                published_at: r.published_at,
+                html_url: r.html_url,
+                iso_downloads: r.assets.filter(a => a.name.endsWith('.iso')).reduce((s, a) => s + a.download_count, 0),
+                asset_downloads: r.assets.reduce((s, a) => s + a.download_count, 0)
+              }))
+            };
+          }
+        }
+
+        if (data && data.totals) {
+          document.getElementById('val-iso-downloads').textContent = data.totals.iso_downloads.toLocaleString();
+          document.getElementById('val-asset-downloads').textContent = data.totals.asset_downloads.toLocaleString();
+          document.getElementById('val-releases').textContent = data.totals.releases.toLocaleString();
+          document.getElementById('val-releases-breakdown').textContent =
+            `${data.totals.stable_releases || 0} stable / ${data.totals.prereleases || 0} candidate`;
+        }
+
+        if (data && data.latest) {
+          document.getElementById('val-latest-version').textContent = data.latest.version || '—';
+          document.getElementById('val-latest-downloads').textContent = `${(data.latest.iso_downloads || 0).toLocaleString()} ISO downloads`;
+        }
+
+        const tbody = document.getElementById('releases-body');
+        tbody.innerHTML = '';
+        if (data && data.releases && data.releases.length > 0) {
+          data.releases.forEach(r => {
+            const tr = document.createElement('tr');
+            const dateStr = r.published_at ? new Date(r.published_at).toISOString().split('T')[0] : '—';
+            tr.innerHTML = `
+              <td><strong><a href="${r.html_url}" target="_blank" rel="noopener">${r.tag}</a></strong></td>
+              <td><span class="tag-pill ${r.prerelease ? 'candidate' : 'stable'}">${r.prerelease ? 'Candidate' : 'Stable'}</span></td>
+              <td>${dateStr}</td>
+              <td><strong>${r.iso_downloads.toLocaleString()}</strong></td>
+              <td>${r.asset_downloads.toLocaleString()}</td>
+              <td><a href="${r.html_url}" target="_blank" rel="noopener">View Assets ↗</a></td>
+            `;
+            tbody.appendChild(tr);
+          });
+        } else {
+          tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #8b949e; padding: 2rem;">No releases published yet on mirror.</td></tr>';
+        }
+      } catch (err) {
+        console.error('Error loading release metrics:', err);
+      }
+    }
+
+    loadStats();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snigdhaos-release-mirror"
+version = "1.0.0"
+description = "Automated GitLab to GitHub Release Mirroring and Analytics for Snigdha OS Decentralized"
+readme = "README.md"
+authors = [
+    { name = "Snigdha OS Development Team", email = "security@snigdhaos.org" }
+]
+license = { text = "GPL-3.0-or-later" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Archiving :: Mirroring",
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+release-mirror = "release_mirror.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["release_mirror*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["."]
+

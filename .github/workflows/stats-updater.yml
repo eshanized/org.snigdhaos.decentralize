@@ -1,0 +1,42 @@
+name: Update Download Analytics & Badges
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Every 6 hours
+  release:
+    types: [ published, edited, deleted ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate Public Download Statistics and Badges
+        env:
+          GITHUB_RELEASE_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 bin/release-mirror stats --badges-dir public/badges --output public/stats.json
+
+      - name: Commit Updated Analytics
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/stats.json public/badges/
+          if git diff --cached --quiet; then
+            echo "No changes in analytics."
+          else
+            git commit -m "chore(stats): update download analytics and public badges [skip ci]"
+            git push origin master
+          fi
